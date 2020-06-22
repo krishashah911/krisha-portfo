@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="description" name="description">
+    <meta content="A personalized digital CV" name="krisha shah">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+
+    <title>Portfolio | Contact</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-icon-180x180.png">
+    <link href="./assets/favicon.ico" rel="icon">
+    <link href="./css/main.d8e0d294un.css" rel="stylesheet">
+
+    <link href="./css/ham-menu.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+
+  </head>
+  <body>
+    <!-- Pre loader Start -->
+    <div id="preloader" style="display: none;">
+      <div id="status" style="display: none;"> 
+      </div>
+    </div>
+    <!-- Preloader End -->
+    <div class="background-color-layer" style="background-image: url('./assets/images/img-01.jpg')"></div>
+    <main class="content-wrapper">
+
+      <!-- Navbar Menu Start -->
+      <nav id="hamnav" class="zone sticky">
+        <ul class="main-nav">
+          <div class="nav-brand">
+            <li><a href="./index.html" style="font-family: 'Raleway', sans-serif; text-decoration: none; ">KRISHA SHAH</a></li>
+          </div>
+        <!-- [THE HAMBURGER] -->
+        <label for="hamburger" style="">&#9776;</label>
+        <input type="checkbox" id="hamburger"/>
+        <!-- [MENU ITEMS] -->
+        
+          <div id="hamitems" class="navbar-right">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./index.html">About</a></li>
+            <li><a href="./index.html">Skills </a></li>
+            <li><a href="./project.html">Projects</a></li>
+            <li><a href="./certificate.html">Certifications</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+          </div>
+
+        </ul>
+      </nav>
+      <!-- Navbar Menu End -->
+
+    
+      <header class="white-text-container section-container">
+        <div class="text-center">
+          <br>
+          <br>
+          <br>
+          <br>
+
+        </div>
+      </header>
+      <!-- Add your site or app content here -->
+ 
+ <div class="container">
+   <div class="row">
+     <div class="col-xs-12">
+        <div class="card">
+          <div class="card-block">
+            <h2>Contact</h2>
+            <form autocomplete="off" action="" id="form" target="_self" class="reveal-content" onsubmit="return postToGoogle();">
+              <div class="form-group">
+                <input type="email" name="entry.2008660880" class="form-control" id="email" placeholder="Email" required>
+              </div>
+              <div class="form-group">
+                <input type="text" name="entry.1460631936" class="form-control" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="entry.904964149" rows="5" placeholder="Enter your message" id="message" required></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" id="send" class=" btn btn-primary">Send message</button>
+              </div> 
+            </form>
+
+            <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color: rgba(255, 0, 96, 1)"> Your Response has been collected. Will revert back soon</h3>
+
+          </div>
+        </div>
+       
+     </div>
+   </div>
+ </div>
+</main>
+
+
+<section class="footer"> 
+  <div class="container tex-center">
+    <div class="row">
+      <div class="col-xs-12">
+        
+        <p>
+          <a class="fa-icon fa-icon-2x" href="https://www.facebook.com/krisha.shah.7798" title="">
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://www.instagram.com/_k_r_i_s_h_a_/" title="">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://github.com/krishashah911" title="">
+            <i class="fa fa-github"></i>
+          </a>
+          <a class="fa-icon fa-icon-2x" href="https://www.linkedin.com/in/krisha-shah-0974bb18b/" title="">
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </p>
+      </div>
+    </div>
+    </div>
+    <p class="heart">
+            Made with
+            <span class="fa fa-heart fa-2x animated pulse"></span> by Krisha
+          </p>
+          <p class="copyright">
+            Krisha Shah, 9892625204, krisha9jan@gmail.com
+          </p>
+  </div>
+</section>
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function (event) {
+     scrollRevelation('.card');
+  });
+</script>
+<script type="text/javascript" src="./main.bc58148c.js"></script>
+
+<script>
+function postToGoogle() {
+                var field1 = $("#email").val();
+                var field2 = $("#subject").val();
+                var field3 = $("#message").val();
+        
+        if(field1 == ""){
+          alert('Please Enter your Email Id');
+          document.getElementById("email").focus();
+          return false;
+        }
+        if(field2 == ""){
+          alert('Please add a Subject');
+          document.getElementById("subject").focus();
+          return false;
+        }
+        if(field3 == ""){
+          alert('Please write your message');
+          document.getElementById("message").focus();
+          return false;
+        }
+
+
+        
+  
+                $.ajax({
+                    url: "https://docs.google.com/forms/d/e/1FAIpQLSfIMhtvUKx9l_jFy4r2vQbvGPm9wADSc0bWYjqBOdHregh-cw/viewform?vc=0&c=0&w=1/formResponse?",
+          data: {"entry.2008660880": field1, "entry.1460631936": field2, "entry.904964149": field3},
+                    type: "POST",
+                    dataType: "xml",
+                    success: function(d)
+          {
+          },
+          error: function(x, y, z)
+            {
+
+              $('#success-msg').show();
+              $('#form').hide();
+              
+            }
+                });
+        return false;
+            }
+</script>
+  </body>
+</html>
