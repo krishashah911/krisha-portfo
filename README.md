@@ -36,10 +36,12 @@ Check out the live demo of the portfolio [here](https://krishashah911.github.io/
 
 Here are some screenshots of the website:
 
-![Homepage Screenshot](./assets/screenshot-home.png)
+<img width="926" alt="image" src="https://github.com/user-attachments/assets/705c3ea8-bedd-4bae-a73c-435663be19c9" />
+
 *The homepage of the portfolio website.*
 
-![Projects Section Screenshot](./assets/screenshot-projects.png)
+<img width="931" alt="image" src="https://github.com/user-attachments/assets/6e227032-7930-48be-b17a-aa6ced8d2849" />
+
 *The projects section showcasing my work.*
 
 ## Technologies Used
